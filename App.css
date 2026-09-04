@@ -1,0 +1,660 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+
+
+/* ============================================================
+   GLOBAL
+============================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: "Baloo 2", sans-serif;
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   MAIN APP
+============================================================ */
+
+.app {
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+
+  background:
+    radial-gradient(
+      circle at 50% -15%,
+      #fff8f8 0%,
+      #f9e1e5 38%,
+      #f4d0d8 100%
+    );
+
+  color: #211923;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.header {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  padding-top: clamp(8px, 1.5vh, 20px);
+}
+
+
+
+
+/* ============================================================
+   LOGO
+============================================================ */
+
+.logo-container {
+  height: clamp(115px, 19vh, 190px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+}
+
+
+.logo-image {
+  width: clamp(200px, 22vw, 330px);
+
+  max-height: clamp(120px, 19vh, 190px);
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* ============================================================
+   INSTRUCTION
+============================================================ */
+
+.instruction {
+  background: #fff2f4;
+
+  border: 3px solid #211923;
+
+  border-radius: 30px;
+
+  padding:
+    clamp(5px, 0.8vh, 10px)
+    clamp(20px, 2vw, 35px);
+
+  font-size: clamp(14px, 1.2vw, 20px);
+
+  font-weight: 800;
+
+  color: #633047;
+
+  box-shadow:
+    0 6px 0 #211923;
+
+  white-space: nowrap;
+}
+
+
+/* ============================================================
+   NOW PLAYING
+============================================================ */
+
+.now-playing-section {
+  width: min(850px, 75vw);
+
+  margin: clamp(15px, 2vh, 25px) auto 0;
+
+  flex-shrink: 0;
+
+  position: relative;
+}
+
+
+.now-playing-label {
+  position: relative;
+
+  width: fit-content;
+
+  margin: 0 auto -2px;
+
+  padding: 5px 25px;
+
+  background: #e75b75;
+
+  border: 3px solid #211923;
+  border-bottom: none;
+
+  border-radius: 10px 10px 0 0;
+
+  color: white;
+
+  font-size: clamp(12px, 1vw, 17px);
+
+  font-weight: 800;
+
+  z-index: 2;
+}
+
+
+.now-playing {
+  width: 100%;
+
+  min-height: clamp(80px, 10vh, 105px);
+
+  background: #fff9ed;
+
+  border: 3px solid #211923;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 8px 0 #211923;
+
+  display: flex;
+
+  align-items: center;
+
+  padding:
+    clamp(10px, 1vw, 18px)
+    clamp(15px, 2vw, 25px);
+
+  position: relative;
+}
+
+
+.current-key {
+  width: clamp(52px, 5vw, 70px);
+  height: clamp(52px, 5vw, 70px);
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f6cad4;
+
+  border: 3px solid #211923;
+
+  border-radius: 15px;
+
+  box-shadow: 5px 5px 0 #211923;
+
+  font-size: clamp(20px, 2vw, 30px);
+
+  font-weight: 800;
+}
+
+
+.dialogue-info {
+  margin-left: clamp(15px, 2vw, 25px);
+
+  min-width: 0;
+}
+
+
+.dialogue-info h1 {
+  margin: 0;
+
+  font-size: clamp(20px, 2.1vw, 34px);
+
+  line-height: 1;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.dialogue-info p {
+  margin: 8px 0 0;
+
+  color: #71384d;
+
+  font-size: clamp(12px, 1vw, 16px);
+
+  font-weight: 600;
+}
+
+
+/* ============================================================
+   KEYBOARD CONTAINER
+============================================================ */
+
+.keyboard-container {
+  width: min(1100px, 88vw);
+
+  flex: 1;
+
+  min-height: 0;
+
+  margin: clamp(18px, 2.5vh, 30px) auto 0;
+
+  background: rgba(255, 247, 245, 0.7);
+
+  border: 3px solid #211923;
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 9px 0 #211923;
+
+  padding:
+    clamp(15px, 2vh, 25px)
+    clamp(12px, 2vw, 30px);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   KEYBOARD
+============================================================ */
+
+.keyboard {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: clamp(5px, 1vh, 10px);
+
+  align-items: center;
+}
+
+
+.keyboard-row {
+  display: flex;
+
+  justify-content: center;
+
+  gap: clamp(4px, 0.7vw, 8px);
+
+  width: 100%;
+}
+
+
+/* ============================================================
+   KEYS
+============================================================ */
+
+.key {
+  width: clamp(45px, 5vw, 68px);
+  height: clamp(38px, 6vh, 58px);
+
+  position: relative;
+
+  border: 2px solid #b9a8ab;
+
+  border-radius: 11px;
+
+  background: #eee4e4;
+
+  color: #8e8588;
+
+  font-family: "Baloo 2", sans-serif;
+
+  font-size: clamp(13px, 1.2vw, 18px);
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.08s ease,
+    box-shadow 0.08s ease,
+    background 0.15s ease;
+
+  box-shadow:
+    0 4px 0 #b9a8ab;
+
+  flex-shrink: 0;
+}
+
+
+.key:hover {
+  background: #fff4ef;
+
+  color: #30252b;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 0 #b9a8ab;
+}
+
+
+.key:active,
+.key.active {
+  transform: translateY(4px);
+
+  box-shadow:
+    0 0 0 #b9a8ab;
+
+  background: #ed5b73;
+
+  color: white;
+
+  border-color: #211923;
+}
+
+
+/* ============================================================
+   DOT ON KEY
+============================================================ */
+
+.key-dot {
+  position: absolute;
+
+  top: 5px;
+  right: 6px;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #e65b76;
+}
+
+
+/* ============================================================
+   SPECIAL KEYS
+============================================================ */
+
+.space-key {
+  width: clamp(130px, 20vw, 240px);
+}
+
+
+.backspace-key {
+  width: clamp(100px, 11vw, 140px);
+}
+
+
+.enter-key {
+  width: clamp(80px, 9vw, 120px);
+}
+
+
+/* ============================================================
+   ROW POSITIONING
+============================================================ */
+
+/* Top row */
+.row-0 {
+  transform: translateX(10px);
+}
+
+
+/* Q row */
+.row-1 {
+  transform: translateX(-5px);
+}
+
+
+/* Home row */
+.row-2 {
+  transform: translateX(15px);
+}
+
+
+/* Bottom row */
+.row-3 {
+  transform: translateX(20px);
+}
+
+
+/* ============================================================
+   CONTROLS
+============================================================ */
+
+.controls {
+  width: min(850px, 75vw);
+
+  min-height: clamp(55px, 7vh, 75px);
+
+  flex-shrink: 0;
+
+  margin: clamp(12px, 2vh, 22px) auto clamp(10px, 1.5vh, 18px);
+
+  background: #fff9ed;
+
+  border: 3px solid #211923;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 6px 0 #211923;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: clamp(20px, 4vw, 50px);
+
+  padding: 8px 20px;
+}
+
+
+/* ============================================================
+   VOLUME
+============================================================ */
+
+.volume-control {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+.volume-icon {
+  font-size: clamp(14px, 1.3vw, 20px);
+}
+
+
+.volume-text {
+  font-size: clamp(13px, 1vw, 17px);
+
+  font-weight: 800;
+
+  color: #553447;
+}
+
+
+.volume-control input[type="range"] {
+  width: clamp(100px, 14vw, 180px);
+
+  accent-color: #e65b76;
+
+  cursor: pointer;
+}
+
+
+/* ============================================================
+   STOP BUTTON
+============================================================ */
+
+.stop-button {
+  border: none;
+
+  background: #211923;
+
+  color: white;
+
+  border-radius: 12px;
+
+  padding: 10px 18px;
+
+  font-family: "Baloo 2", sans-serif;
+
+  font-weight: 800;
+
+  font-size: clamp(12px, 1vw, 16px);
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 0 #e65b76;
+
+  transition: transform 0.08s ease;
+}
+
+
+.stop-button:hover {
+  transform: translateY(-2px);
+}
+
+
+.stop-button:active {
+  transform: translateY(3px);
+
+  box-shadow:
+    0 1px 0 #e65b76;
+}
+
+
+/* ============================================================
+   SMALL SCREENS
+============================================================ */
+
+@media (max-width: 800px) {
+
+  .app {
+    min-height: 500px;
+  }
+
+  .logo-container {
+    height: 100px;
+  }
+
+  .instruction {
+    font-size: 12px;
+  }
+
+  .now-playing-section {
+    width: 90vw;
+  }
+
+  .keyboard-container {
+    width: 96vw;
+
+    padding: 10px 5px;
+
+    border-radius: 18px;
+  }
+
+  .keyboard-row {
+    gap: 3px;
+  }
+
+  .key {
+    width: clamp(30px, 7vw, 52px);
+
+    height: clamp(32px, 5vh, 45px);
+
+    font-size: clamp(10px, 2vw, 15px);
+  }
+
+  .space-key {
+    width: 22vw;
+  }
+
+  .backspace-key {
+    width: 15vw;
+  }
+
+  .enter-key {
+    width: 13vw;
+  }
+
+  .controls {
+    width: 90vw;
+  }
+}
+
+
+/* ============================================================
+   VERY SHORT SCREENS
+============================================================ */
+
+@media (max-height: 700px) {
+
+  .logo-container {
+    height: 85px;
+  }
+
+  .logo-placeholder {
+    height: 70px;
+  }
+
+  .instruction {
+    padding: 3px 18px;
+  }
+
+  .now-playing-section {
+    margin-top: 10px;
+  }
+
+  .now-playing {
+    min-height: 65px;
+  }
+
+  .keyboard-container {
+    margin-top: 15px;
+  }
+
+  .keyboard {
+    gap: 4px;
+  }
+
+  .key {
+    height: 40px;
+  }
+
+  .controls {
+    min-height: 48px;
+
+    margin-top: 10px;
+  }
+}

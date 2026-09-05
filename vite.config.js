@@ -3,5 +3,5 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/useless_project_temp/",
+  base: process.env.VERCEL ? "/" : "/useless_project_temp/",
 });
